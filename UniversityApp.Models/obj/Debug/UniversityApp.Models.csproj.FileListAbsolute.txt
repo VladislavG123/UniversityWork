@@ -1,0 +1,5 @@
+C:\Users\гороховв.CORP\source\repos\UniversityApp\UniversityApp.Models\bin\Debug\UniversityApp.Models.dll
+C:\Users\гороховв.CORP\source\repos\UniversityApp\UniversityApp.Models\bin\Debug\UniversityApp.Models.pdb
+C:\Users\гороховв.CORP\source\repos\UniversityApp\UniversityApp.Models\obj\Debug\UniversityApp.Models.csproj.CoreCompileInputs.cache
+C:\Users\гороховв.CORP\source\repos\UniversityApp\UniversityApp.Models\obj\Debug\UniversityApp.Models.dll
+C:\Users\гороховв.CORP\source\repos\UniversityApp\UniversityApp.Models\obj\Debug\UniversityApp.Models.pdb
