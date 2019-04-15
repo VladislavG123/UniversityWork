@@ -12,3 +12,17 @@ C:\Users\гороховв.CORP\source\repos\UniversityApp\UniversityApp\bin\Debu
 C:\Users\гороховв.CORP\source\repos\UniversityApp\UniversityApp\obj\Debug\UniversityApp.csproj.CopyComplete
 C:\Users\гороховв.CORP\source\repos\UniversityApp\UniversityApp\bin\Debug\UniversityApp.Models.dll
 C:\Users\гороховв.CORP\source\repos\UniversityApp\UniversityApp\bin\Debug\UniversityApp.Models.pdb
+C:\Users\Vlad\source\repos\UniversityApp\UniversityApp\bin\Debug\University.mdf
+C:\Users\Vlad\source\repos\UniversityApp\UniversityApp\bin\Debug\University_log.ldf
+C:\Users\Vlad\source\repos\UniversityApp\UniversityApp\bin\Debug\UniversityApp.exe.config
+C:\Users\Vlad\source\repos\UniversityApp\UniversityApp\bin\Debug\UniversityApp.exe
+C:\Users\Vlad\source\repos\UniversityApp\UniversityApp\bin\Debug\UniversityApp.pdb
+C:\Users\Vlad\source\repos\UniversityApp\UniversityApp\bin\Debug\UniversityApp.DataAccess.dll
+C:\Users\Vlad\source\repos\UniversityApp\UniversityApp\bin\Debug\UniversityApp.Models.dll
+C:\Users\Vlad\source\repos\UniversityApp\UniversityApp\bin\Debug\UniversityApp.DataAccess.pdb
+C:\Users\Vlad\source\repos\UniversityApp\UniversityApp\bin\Debug\UniversityApp.Models.pdb
+C:\Users\Vlad\source\repos\UniversityApp\UniversityApp\obj\Debug\UniversityApp.csprojAssemblyReference.cache
+C:\Users\Vlad\source\repos\UniversityApp\UniversityApp\obj\Debug\UniversityApp.csproj.CoreCompileInputs.cache
+C:\Users\Vlad\source\repos\UniversityApp\UniversityApp\obj\Debug\UniversityApp.csproj.CopyComplete
+C:\Users\Vlad\source\repos\UniversityApp\UniversityApp\obj\Debug\UniversityApp.exe
+C:\Users\Vlad\source\repos\UniversityApp\UniversityApp\obj\Debug\UniversityApp.pdb

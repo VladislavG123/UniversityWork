@@ -1,26 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data.Common;
 using System.Data;
-using System.Configuration;
 using UniversityApp.Models;
 
 namespace UniversityApp.DataAccess
 {
-    public class StudentService
+
+    public class StudentService : EntityService<Student>, IService<Student>
     {
-        readonly string _providerName;
-        readonly string _connectionString;
-
-        public StudentService()
-        {
-            _providerName = ConfigurationManager.ConnectionStrings["appConnection"].ProviderName;
-            _connectionString = ConfigurationManager.ConnectionStrings["appConnection"].ConnectionString;
-
-        }
 
         public List<Student> Select()
         {
@@ -28,7 +16,6 @@ namespace UniversityApp.DataAccess
             var connection = factory.CreateConnection();
 
             connection.ConnectionString = _connectionString;
-
             var adapter = factory.CreateDataAdapter();
 
 
@@ -41,7 +28,7 @@ namespace UniversityApp.DataAccess
             adapter.Fill(data, "Student");
 
             List<Student> tablesData = new List<Student>();
-            
+
             for (int i = 0; i < data.Tables["Student"].Rows.Count; i++)
             {
                 tablesData.Add(new Student
@@ -57,27 +44,88 @@ namespace UniversityApp.DataAccess
         }
 
 
-        public bool Insert(string name, int groupId)
+        public bool Insert(Student student)
         {
             var factory = DbProviderFactories.GetFactory(_providerName);
+
             var connection = factory.CreateConnection();
-
             connection.ConnectionString = _connectionString;
+            _adapter = factory.CreateDataAdapter();
 
-            var adapter = factory.CreateDataAdapter();
-
+            var selectCommand = connection.CreateCommand();
+            selectCommand.CommandText = $"select * from Student";
+            _adapter.SelectCommand = selectCommand;
 
             var insertCommand = connection.CreateCommand();
-            insertCommand.CommandText = $"insert into Student(Name, GroupId) VALUES({name},{groupId})";
-            adapter.InsertCommand = insertCommand;
+            insertCommand.CommandText = $"insert into Student([Name], GroupId) Values(\'{student.Name}\', {student.GroupId})";
+            _adapter.InsertCommand = insertCommand;
 
-            DataSet data = new DataSet();
+            try
+            {
+                DataSet data = new DataSet();
+                _adapter.Fill(data, "Student");
 
-            adapter.Fill(data, "Student");
-            
+                data.Tables["Student"].Rows.Add(new object[] { student.Id, student.Name, student.GroupId });
+
+                _adapter.Update(data, "Student");
+                _adapter.Dispose();
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception.Message);
+                return false;
+            }
+            return true;
         }
 
+        public bool Update(int oldItemId, Student newItem)
+        {
+            throw new NotImplementedException();
+        }
 
+        public bool Delete(int rowId)
+        {
+            try
+            {
+                var factory = DbProviderFactories.GetFactory(_providerName);
+
+                var connection = factory.CreateConnection();
+                connection.ConnectionString = _connectionString;
+                _adapter = factory.CreateDataAdapter();
+
+                var selectCommand = connection.CreateCommand();
+                selectCommand.CommandText = "select * from Student";
+                _adapter.SelectCommand = selectCommand;
+
+                var deleteCommand = connection.CreateCommand();
+                deleteCommand.CommandText = $"delete Student where Id={rowId.ToString()}";
+
+                _adapter.DeleteCommand = deleteCommand;
+
+                var usersCommandBuilder = factory.CreateCommandBuilder();
+                usersCommandBuilder.DataAdapter = _adapter;
+
+                
+                DataSet data = new DataSet();
+                _adapter.Fill(data, "Student");
+                
+                data.Tables["Student"].Rows[rowId].BeginEdit();
+
+                data.Tables["Student"].Rows[rowId].Delete();
+
+                data.Tables["Student"].Rows[rowId].EndEdit();
+
+                _adapter.Update(data, "Student");
+                _adapter.Dispose();
+
+            }
+            catch (Exception exception)
+            {
+               Console.WriteLine(exception.Message);
+                //  throw;
+                return false;
+            }
+            return true;
+        }
     }
 }
-

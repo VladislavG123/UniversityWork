@@ -9,3 +9,14 @@ C:\Users\гороховв.CORP\source\repos\UniversityApp\UniversityApp.DataAcce
 C:\Users\гороховв.CORP\source\repos\UniversityApp\UniversityApp.DataAccess\bin\Debug\UniversityApp.Models.dll
 C:\Users\гороховв.CORP\source\repos\UniversityApp\UniversityApp.DataAccess\bin\Debug\UniversityApp.Models.pdb
 C:\Users\гороховв.CORP\source\repos\UniversityApp\UniversityApp.DataAccess\obj\Debug\UniversityApp.DataAccess.csproj.CopyComplete
+C:\Users\Vlad\source\repos\UniversityApp\UniversityApp.DataAccess\bin\Debug\University.mdf
+C:\Users\Vlad\source\repos\UniversityApp\UniversityApp.DataAccess\bin\Debug\University_log.ldf
+C:\Users\Vlad\source\repos\UniversityApp\UniversityApp.DataAccess\bin\Debug\UniversityApp.DataAccess.dll
+C:\Users\Vlad\source\repos\UniversityApp\UniversityApp.DataAccess\bin\Debug\UniversityApp.DataAccess.pdb
+C:\Users\Vlad\source\repos\UniversityApp\UniversityApp.DataAccess\bin\Debug\UniversityApp.Models.dll
+C:\Users\Vlad\source\repos\UniversityApp\UniversityApp.DataAccess\bin\Debug\UniversityApp.Models.pdb
+C:\Users\Vlad\source\repos\UniversityApp\UniversityApp.DataAccess\obj\Debug\UniversityApp.DataAccess.csprojAssemblyReference.cache
+C:\Users\Vlad\source\repos\UniversityApp\UniversityApp.DataAccess\obj\Debug\UniversityApp.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Vlad\source\repos\UniversityApp\UniversityApp.DataAccess\obj\Debug\UniversityApp.DataAccess.csproj.CopyComplete
+C:\Users\Vlad\source\repos\UniversityApp\UniversityApp.DataAccess\obj\Debug\UniversityApp.DataAccess.dll
+C:\Users\Vlad\source\repos\UniversityApp\UniversityApp.DataAccess\obj\Debug\UniversityApp.DataAccess.pdb
